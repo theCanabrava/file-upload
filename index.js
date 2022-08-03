@@ -51,3 +51,20 @@ const move = (file, onSuccess) =>
 }
 
 app.listen(3001, ()=>console.log('Listening on port 3001'))
+
+/*
+  SNIPET PARA UPLOAD
+  
+    console.log('Uploading file')
+    var blob = new Blob(['Hello'], {type: 'text/plain'})
+    console.log('resulting blob', blob)
+    var formData = new FormData()
+    formData.append('CaseId', "2022031225")
+    formData.append('Anexos', blob, 'hello.txt')
+    formData.append('Anexos', blob, 'hello1.txt')
+    formData.append('Anexos', blob, 'hello2.txt')
+
+    console.log('Resulting form data', formData)
+    const response = await axios.post('http://localhost:3001/upload', formData);
+    console.log(response)
+*/
